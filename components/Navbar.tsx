@@ -12,7 +12,7 @@ const menuItems = [
     href: "/about",
   },
   {
-    text: "Contact",
+    text: "Contact me",
     href: "/contact",
   },
   {
