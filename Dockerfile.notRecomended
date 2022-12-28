@@ -1,0 +1,31 @@
+## NOT RECOMENDED BY NEXT BECAUSE IT CREATE AN IMAGE VERY BIG
+
+FROM node:16-alpine
+
+# create app folder
+RUN mkdir -p /app 
+
+# move to app
+WORKDIR /app
+
+# Copy package.json into app
+COPY package.json /app
+
+# Install dependencies
+RUN yarn install
+
+# Copy all the project into app, ignore .dockerignore folders
+COPY . /app
+
+# Build de app
+RUN yarn build
+
+# Expose port
+EXPOSE 3000
+
+# RUN is basically used to run a command, whether it is installing a service, deleting files, creating directories,... It can 
+# be executed as many times as we need within the dockerfile. CMD is used to run a command by default, when the container is created.
+CMD ["yarn", "start"]
+
+
+

@@ -31,3 +31,23 @@ This command will detect and install the missing typescript dependencies:
 The command create the file: next-env.d.ts => For enviroment variables.
 *Next allow us to keep using js without migrate the current code to ts.
 
+## Create Docker image (docker desktop running).
+
+1. Add to next.config.js the experimental object.
+2. Add to start script on package.json: -p ${PORT:=DOCKERFILE_EXPOSE_PORT_VALUE}
+
+```bash
+    docker build -t next-initial-demo .
+```
+
+## Run Docker image
+
+    1. --name= is for naming de container (we can see it in docker desktop containers). It is optional but if we dont assign one docker chose some strange name.
+
+    2. -p MiPort:ContainerPort 
+ 
+```bash
+    docker run --name=next-app -p 3001:3000 nextjs-initial-demo
+``` 
+
+We can see the app on localhost:3001
