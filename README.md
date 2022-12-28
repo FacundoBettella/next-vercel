@@ -42,7 +42,9 @@ The command create the file: next-env.d.ts => For enviroment variables.
 
 ## Run Docker image
 
-    1. --name= is for naming de container (we can see it in docker desktop containers). It is optional but if we dont assign one docker chose some strange name.
+    1. --name= is for naming de container (we can see it in docker desktop containers). 
+    
+        It is optional but if we dont assign one docker chose some strange name.
 
     2. -p MiPort:ContainerPort 
  
