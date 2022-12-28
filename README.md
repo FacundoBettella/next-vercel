@@ -10,25 +10,24 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Start Typescript
+1. Create tsconfig file
+```bash
+touch tsconfig.json
+```
+2. Then run:
+```
+yarn dev
+```
+This command will detect and install the missing typescript dependencies:
+    It looks like you're trying to use TypeScript but do not have the required package(s) installed.
+    Installing devDependencies (yarn):
+    - typescript
+    - @types/react
+    - @types/node
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+    We detected TypeScript in your project and created a tsconfig.json file for you.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The command create the file: next-env.d.ts => For enviroment variables.
+*Next allow us to keep using js without migrate the current code to ts.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
